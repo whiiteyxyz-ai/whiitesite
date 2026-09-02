@@ -1,0 +1,31 @@
+{
+  "name": "whiitesite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "WhiiteSite Multi-Tool – Bildgenerierung, Produktbeschreibungen, Whiity KI-Assistent",
+  "workspaces": [
+    "packages/*",
+    "services/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace @whiite/web",
+    "build": "npm run build --workspace @whiite/web",
+    "typecheck": "tsc -p tsconfig.json --noEmit && npm run typecheck --workspace @whiite/web",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.2.4"
+  },
+  "dependencies": {
+    "vite-tsconfig-paths": "^6.1.1",
+    "zod": "^3.22.0"
+  }
+}
