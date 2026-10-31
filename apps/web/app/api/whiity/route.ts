@@ -20,7 +20,7 @@ function getWhiity(): WhiityService {
         create: (data: { title: string }) =>
           memoryStore!.conversations.create({ ...data, messages: [], contextEntityIds: [] }),
         get: (id: string) => memoryStore!.conversations.get(id),
-        addMessage: (id: string, msg: Parameters<(typeof memoryStore)["conversations"]["addMessage"]>[1]) =>
+        addMessage: (id: string, msg: Parameters<JsonMemoryStore["conversations"]["addMessage"]>[1]) =>
           memoryStore!.conversations.addMessage(id, msg),
         list: (limit?: number) => memoryStore!.conversations.list(limit),
       },

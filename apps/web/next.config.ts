@@ -8,6 +8,11 @@ const config: NextConfig = {
     "@whiite/memory",
     "@whiite/whiity",
   ],
+  experimental: {
+    extensionAlias: {
+      ".js": [".ts", ".tsx", ".js"],
+    },
+  },
 };
 
 export default config;

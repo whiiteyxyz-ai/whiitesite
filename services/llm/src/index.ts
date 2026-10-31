@@ -12,7 +12,7 @@ export class OllamaProvider implements LLMProvider {
 
   constructor(config: OllamaConfig = {}) {
     this.baseUrl = config.baseUrl ?? process.env.OLLAMA_BASE_URL ?? DEFAULT_BASE;
-    this.defaultModel = config.model ?? process.env.OLLAMA_MODEL ?? "qwen3.5:9b";
+    this.defaultModel = config.model ?? process.env.OLLAMA_MODEL ?? "qwen3:8b";
   }
 
   async models(): Promise<string[]> {
